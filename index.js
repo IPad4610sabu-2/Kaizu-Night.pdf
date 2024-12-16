@@ -16,11 +16,11 @@ app.use(express.static(__dirname + '/static'));
 app.use(cors());
 
 
-app.get('/', (req, res) => {
+app.get('/home.pdf', (req, res) => {
     res.sendFile(path.join(process.cwd(), '/pages/index.html'));
 });
 
-app.get('/index', (req, res) => {
+app.get('/home.pdf', (req, res) => {
   res.sendFile(path.join(process.cwd(), '/pages/index.html'));
 });
 
@@ -36,7 +36,7 @@ app.get('/extras', (req, res) => {
   res.sendFile(path.join(process.cwd(), '/pages/e.html'));
 });
 
-app.get('/edu', (req, res) => {
+app.get('/edu.pdf', (req, res) => {
   res.sendFile(path.join(process.cwd(), '/pages/edu.html'));
 });
 
@@ -44,7 +44,7 @@ app.get('/games', (req, res) => {
   res.sendFile(path.join(process.cwd(), '/pages/games.html'));
 });
 
-app.get('/s', (req, res) => {
+app.get('/s.pdf', (req, res) => {
   res.sendFile(path.join(process.cwd(), '/pages/settings.html'));
 });
 
