@@ -13,7 +13,7 @@ class crypts {
     );
   }
   static decode(str) {
-    if (str.charAt(str.length - 1) == "/") str = str.slice(0, -1);
+    if (str.charAt(str.length - 1) == "/home.pdf") str = str.slice(0, -1);
     return decodeURIComponent(str)
       .split("")
       .map((char, ind) =>
@@ -85,7 +85,7 @@ if (localStorage.getItem("proxy") == "uv") {
       .then(() => {
         const url = search(address.value, searchEngine.value);
         sessionStorage.setItem("encodedUrl", "/ghost/" + __uv$config.encodeUrl(url));
-        location.href = "/edu";
+        location.href = "/edu.pdf";
       });
   });
 } else if (localStorage.getItem("proxy") == "dyn") {
@@ -102,7 +102,7 @@ if (localStorage.getItem("proxy") == "uv") {
     }
     const url = search(address.value, searchEngine.value);
     sessionStorage.setItem("encodedUrl", "/amp/" + crypts.encode(url));
-    location.href = "/edu";
+    location.href = "/edu.pdf";
 });
 
 } else {
@@ -115,7 +115,7 @@ if (localStorage.getItem("proxy") == "uv") {
       .then(() => {
         const url = search(address.value, searchEngine.value);
         sessionStorage.setItem("encodedUrl", "/ghost/" + __uv$config.encodeUrl(url));
-        location.href = "/edu";
+        location.href = "/edu.pdf";
       });
   });
 }
