@@ -17,15 +17,15 @@ app.use(cors());
 
 
 app.get('/home.pdf', (req, res) => {
-    res.sendFile(path.join(process.cwd(), '/pages/index.html'));
+    res.sendFile(path.join(process.cwd(), '/index.html'));
 });
 
 app.get('/home.pdf', (req, res) => {
-  res.sendFile(path.join(process.cwd(), '/pages/index.html'));
+  res.sendFile(path.join(process.cwd(), '/index.html'));
 });
 
 app.get('/apps', (req, res) => {
-  res.sendFile(path.join(process.cwd(), '/pages/apps.html'));
+  res.sendFile(path.join(process.cwd(), '/apps.html'));
 });
 
 app.get('/about', (req, res) => {
@@ -37,7 +37,7 @@ app.get('/extras', (req, res) => {
 });
 
 app.get('/edu.pdf', (req, res) => {
-  res.sendFile(path.join(process.cwd(), '/pages/edu.html'));
+  res.sendFile(path.join(process.cwd(), '/edu.html'));
 });
 
 app.get('/games', (req, res) => {
@@ -45,7 +45,7 @@ app.get('/games', (req, res) => {
 });
 
 app.get('/s.pdf', (req, res) => {
-  res.sendFile(path.join(process.cwd(), '/pages/settings.html'));
+  res.sendFile(path.join(process.cwd(), '/settings.html'));
 });
 
 server.on('request', (req, res) => {
